@@ -1,0 +1,35 @@
+#app {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  background-color: #15202B;
+  background-size: cover;
+}
+
+.MainLogin {
+  width: 450px;
+  height: 500px;
+  border-radius: 5%;
+  background: white;
+}
+
+.companyName {
+  color: #767272;
+  font-size: 20px;
+  font-style: normal;
+  position: relative;
+  top: 30px;
+}
+
+.username {
+  position: relative;
+  top: 85px;
+}
+
+.password {
+  position: relative;
+  top: 100px;
+}
