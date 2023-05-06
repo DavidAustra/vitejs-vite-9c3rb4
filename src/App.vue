@@ -46,7 +46,39 @@ export default {
         </template>
       </va-input>
     </div>
+
+    <div>
+      <va-button
+        style="position: relative; top: 150px"
+        size="large"
+        color="#00BA7C"
+        text-color="#FFFFFF"
+        round
+      >
+        Log in</va-button
+      >
+    </div>
+
+    <div class="devider">
+      <div class="line" style="position: relative; top: 11px; left: 70px"></div>
+      <div
+        class="line"
+        style="position: relative; top: 10px; left: 250px"
+      ></div>
+      <p>or</p>
+    </div>
+
+    <div>
+      <va-button
+        style="position: relative; top: 225px"
+        size="large"
+        color="#FFFFFF"
+        border-color="#000000"
+        text-color="#000000"
+        round
+      >
+        Sign up</va-button
+      >
+    </div>
   </main>
 </template>
-
-<style></style>
