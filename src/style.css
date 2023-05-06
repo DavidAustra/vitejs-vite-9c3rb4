@@ -18,8 +18,8 @@
 
 .companyName {
   color: #767272;
-  font-size: 20px;
-  font-style: normal;
+  font-size: 25px;
+  font-style: oblique;
   position: relative;
   top: 30px;
 }
@@ -27,11 +27,13 @@
 .username {
   position: relative;
   top: 85px;
+
 }
 
 .password {
   position: relative;
   top: 100px;
+  
 }
 
 .line {
@@ -45,4 +47,8 @@
   font-style: italic;
   position: relative;
   top: 190px;
+}
+
+.losbutton {
+  --va-button-content-px: 100px
 }
