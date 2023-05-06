@@ -1,15 +1,15 @@
 <script>
 export default {
-  name: 'Types',
-
-  data: () => ({
-    isPasswordVisible: false,
-    isPasswordWrong: false,
-    isUsernameWrong: false,
-    username: '',
-    password: '',
-    errorMessage: 'Error!',
-  }),
+  data() {
+    return {
+      isPasswordVisible: false,
+      isPasswordWrong: false,
+      isUsernameWrong: false,
+      username: '',
+      password: '',
+      errorMessage: 'Password or Username is wrong!',
+    };
+  },
 };
 </script>
 
@@ -21,10 +21,21 @@ export default {
 
     <div class="username">
       <va-input
+        v-if="!isUsernameWrong"
         v-model="username"
         class="mb-6"
         label="Enter Username"
         placeholder="Username..."
+        color="#000000"
+      />
+
+      <va-input
+        v-if="isUsernameWrong"
+        v-model="username"
+        class="mb-6"
+        label="Enter Username"
+        placeholder="Username..."
+        color="#000000"
       />
     </div>
 
@@ -35,12 +46,13 @@ export default {
         label="Enter Password"
         placeholder="Password..."
         class="mr-6 mb-6"
+        color="#000000"
       >
         <template #appendInner>
           <va-icon
             :name="isPasswordVisible ? 'off' : 'on'"
             size="small"
-            color="808080"
+            color="#000000"
             @click="isPasswordVisible = !isPasswordVisible"
           />
         </template>
@@ -49,8 +61,8 @@ export default {
 
     <div>
       <va-button
+        class="losbutton"
         style="position: relative; top: 150px"
-        size="large"
         color="#00BA7C"
         text-color="#FFFFFF"
         round
@@ -70,8 +82,8 @@ export default {
 
     <div>
       <va-button
+        class="losbutton"
         style="position: relative; top: 225px"
-        size="large"
         color="#FFFFFF"
         border-color="#000000"
         text-color="#000000"
