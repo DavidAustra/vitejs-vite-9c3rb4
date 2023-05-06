@@ -5,7 +5,7 @@
   display: grid;
   place-items: center;
   text-align: center;
-  background-color: #15202B;
+  background-color: #15202b;
   background-size: cover;
 }
 
@@ -32,4 +32,17 @@
 .password {
   position: relative;
   top: 100px;
+}
+
+.line {
+  width: 130px;
+  height: 1px;
+  background: black;
+}
+
+.devider {
+  font-size: 17px;
+  font-style: italic;
+  position: relative;
+  top: 190px;
 }
