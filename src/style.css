@@ -2,11 +2,12 @@
   margin: 0;
   padding: 0;
   height: 100vh;
+  width: 100vw;
   display: grid;
   place-items: center;
   text-align: center;
-  background-color: #15202b;
   background-size: cover;
+  background-image: linear-gradient(to right, #15202b , #080f16);
 }
 
 .MainLogin {
@@ -14,6 +15,9 @@
   height: 500px;
   border-radius: 5%;
   background: white;
+  position: absolute;
+  visibility: visible;
+  z-index: 1;
 }
 
 .companyName {
