@@ -8,7 +8,14 @@ export default {
       username: '',
       password: '',
       errorMessage: 'Password or Username is wrong!',
+      awsome: true,
     };
+  },
+
+  methods: {
+    toggle() {
+      this.awesome = !this.awesome;
+    },
   },
 };
 </script>
@@ -66,9 +73,13 @@ export default {
         color="#00BA7C"
         text-color="#FFFFFF"
         round
+        @click="toggle"
       >
         Log in</va-button
       >
+
+      <h1 v-if="awsome" style="position: relative; top: 175px">Hello</h1>
+      <h1 v-else style="position: relative; top: 175px">TEST</h1>
     </div>
 
     <div class="devider">
