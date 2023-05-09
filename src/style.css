@@ -56,3 +56,59 @@
 .losbutton {
   --va-button-content-px: 100px
 }
+
+.ballcontainer {
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+}
+
+.ball {
+  display: inline-block;
+  position: absolute; /* REQUIRED */
+  background-color: #00ba7c;
+  z-index: 0;
+  border-radius: 50%;
+
+  box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.21) inset;
+  -webkit-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.21) inset;
+  -moz-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.21) inset;
+}
+
+[data-size='small-small'] {
+  width: 7vw;
+  height: 7vw;
+}
+
+[data-size='small'] {
+  width: 10vw;
+  height: 10vw;
+}
+
+[data-size='medium-small'] {
+  width: 15vw;
+  height: 15vw;
+}
+
+[data-size='medium'] {
+  width: 20vw;
+  height: 20vw;
+}
+
+[data-size='large'] {
+  width: 25vw;
+  height: 25vw;
+}
+
+[data-size='large-large'] {
+  width: 30vw;
+  height: 30vw;
+}
+
+[data-size='constant-large'] {
+  width: 600px;
+  height: 600px;
+}
