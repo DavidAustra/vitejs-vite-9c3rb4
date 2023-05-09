@@ -1,4 +1,7 @@
 <script>
+
+import LoginPage from './components/Login.vue'
+
 export default {
   data() {
     return {
@@ -8,100 +11,50 @@ export default {
       username: '',
       password: '',
       errorMessage: 'Password or Username is wrong!',
-      awsome: true,
+      SignUp: false,
     };
   },
 
-  methods: {
-    toggle() {
-      this.awesome = !this.awesome;
-    },
-  },
+  components: {
+    LoginPage
+  }
 };
 </script>
 
 <template>
-  <main class="MainLogin">
-    <header>
-      <h1 class="companyName">TFE | Taxi For Everyone</h1>
-    </header>
+  <div class="ballcontainer">
+    <!--Front-end devs be like-->
+    <div
+      class="ball"
+      style="top: -200px; left: -200px"
+      data-size="constant-large"
+    ></div>
+    <div class="ball" style="top: 0%; left: 55%" data-size="medium-small"></div>
+    <div class="ball" style="top: 10%; left: 90%" data-size="small-small"></div>
+    <div class="ball" style="top: 20%; left: 75%" data-size="small"></div>
+    <div
+      class="ball"
+      style="top: calc(40% - 10vw); left: 20%"
+      data-size="large"
+    ></div>
+    <div
+      class="ball"
+      style="top: calc(60% - 10vw); left: 55%"
+      data-size="large-large"
+    ></div>
+    <div class="ball" style="top: 70%; left: 7%" data-size="medium-small"></div>
+    <div
+      class="ball"
+      style="top: calc(90% - 2vw); left: 25%"
+      data-size="small-small"
+    ></div>
+    <div
+      class="ball"
+      style="top: calc(85% - 8vw); left: calc(85% + calc(1vw / 1000))"
+      data-size="medium-small"
+    ></div>
+  </div>
 
-    <div class="username">
-      <va-input
-        v-if="!isUsernameWrong"
-        v-model="username"
-        class="mb-6"
-        label="Enter Username"
-        placeholder="Username..."
-        color="#000000"
-      />
-
-      <va-input
-        v-if="isUsernameWrong"
-        v-model="username"
-        class="mb-6"
-        label="Enter Username"
-        placeholder="Username..."
-        color="#000000"
-      />
-    </div>
-
-    <div class="password">
-      <va-input
-        v-model="password"
-        :type="isPasswordVisible ? 'text' : 'password'"
-        label="Enter Password"
-        placeholder="Password..."
-        class="mr-6 mb-6"
-        color="#000000"
-      >
-        <template #appendInner>
-          <va-icon
-            :name="isPasswordVisible ? 'off' : 'on'"
-            size="small"
-            color="#000000"
-            @click="isPasswordVisible = !isPasswordVisible"
-          />
-        </template>
-      </va-input>
-    </div>
-
-    <div>
-      <va-button
-        class="losbutton"
-        style="position: relative; top: 150px"
-        color="#00BA7C"
-        text-color="#FFFFFF"
-        round
-        @click="toggle"
-      >
-        Log in</va-button
-      >
-
-      <h1 v-if="awsome" style="position: relative; top: 175px">Hello</h1>
-      <h1 v-else style="position: relative; top: 175px">TEST</h1>
-    </div>
-
-    <div class="devider">
-      <div class="line" style="position: relative; top: 11px; left: 70px"></div>
-      <div
-        class="line"
-        style="position: relative; top: 10px; left: 250px"
-      ></div>
-      <p>or</p>
-    </div>
-
-    <div>
-      <va-button
-        class="losbutton"
-        style="position: relative; top: 225px"
-        color="#FFFFFF"
-        border-color="#000000"
-        text-color="#000000"
-        round
-      >
-        Sign up</va-button
-      >
-    </div>
-  </main>
+  <LoginPage v-if="!SignUp" />
+  <h1 v-else>Hello</h1>
 </template>
